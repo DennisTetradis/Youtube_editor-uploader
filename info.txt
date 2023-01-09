@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=aFwZgth790Q&t=2s&ab_channel=TonyTeachesTech
+https://developers.google.com/youtube/v3/quickstart/python
+https://developers.google.com/youtube/v3/guides/uploading_a_video
+https://console.cloud.google.com/
