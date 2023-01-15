@@ -5,23 +5,27 @@ from rename import rename_clips
 from editor import edit
 
 
-video_count = 0
-def get_video_data():
-    video_count += 1
+def get_video_data(count):
+    count += 1
     
     video_data = {
-        "file": "./final/final{}.mp4".format(video_count),
-        "title": "Bullticks {}".format(video_count),
-        "description": "#shorts\nGiving you the hottest memes of the day with funny comments!",
+        "file": "./final/final{}.mp4".format(count),
+        "title": "Bulltiks {}".format(count),
+        "description": "Best of Memes\nI am just trying to make you laugh!\nI hope you like😜",
         "keywords":"meme,reddit,Dankestmemes",
         "privacyStatus":"public"
     }
+    return (count, video_data)
 
 
-print(video_data["title"])
-print("Posting Video...")
-upload_video(video_data)
-time.sleep(2)
+while True:
+    video_count = 0
+    video_count, video_data = get_video_data(video_count)
+    print(video_data)
+    print("Posting Video...")
+    rename_clips()
+    edit()
+    time.sleep(60)
+    upload_video(video_data)
+    time.sleep(302400)
 
-rename_clips()
-edit()
